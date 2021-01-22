@@ -1,4 +1,4 @@
-package models;
+package Task.java;
 
 import java.sql.Timestamp;
 
@@ -14,12 +14,12 @@ import javax.persistence.Table;
 @Entity
 @NamedQueries({
     @NamedQuery(
-        name = "getAllMessages",
-        query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
+        name = "getAlltasks",
+        query = "SELECT m FROM task AS m ORDER BY m.id DESC"
     )
 })
-@Table(name = "messages")
-public class Message {
+@Table(name = "tasks")
+public class task {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
